@@ -13,6 +13,4 @@ converter = opencc.OpenCC('t2s.json')
 def format(s):
     s = '\n'.join([line.strip() for line in s.splitlines()])
     s = converter.convert(s)
-    s = s.replace('祂', '他')
-    s = s.replace('祢', '你')
     return s
